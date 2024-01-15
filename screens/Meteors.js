@@ -26,7 +26,15 @@ export default class MeteorScreen extends Component {
     }
 
     render() {
-       
+        if (Object.keys(this.state.meteors).length === 0) {
+            return (
+              <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+                <Text>Carregando. . .</Text>
+              </View>
+            )
+        } else {
+            {/*Calcule pontuação de ameaça*/}
+
             return (
                 <View
                     style={{
@@ -39,4 +47,5 @@ export default class MeteorScreen extends Component {
             )
         }
     }
+}
 
